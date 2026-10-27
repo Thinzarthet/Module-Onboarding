@@ -9,17 +9,73 @@
   </head>
   <body>
     <header>
-      <h1>Product Pick</h1>
+      <h1>Product Order Form</h1>
+      <p>Please complete the required (*) details to confirm your t-shirt order.</p>
     </header>
     <main>
       <form>
+        <div>
+          <label for="user-name"> Customer's Full Name *:</label>
+          <input id="user-name" type="text" name="user-name" required minlength="2" autocomplete="name"/>
+        </div>
+        <div>
+          <label for="user-email">Customer's Email *:</label>
+          <input id="user-email" type="email" name="user-email" required autocomplete="email"/>
+        </div>
+        <div>
+          <label for="t-shirt-color">T-Shirt Color *:</label>
+          <select id="t-shirt-color" name="t-shirt-color" required>
+            <option value="" disabled selected>--Please choose a color--</option>
+            <option value="black">Black</option>
+            <option value="blue">Blue</option>
+            <option value="white">White</option>
+          </select>
+        </div>
+        <div>
+          <fieldset>
+            <legend>T-Shirt Size *:</legend>
+            <div>
+              <input id="size-xs" type="radio" name="tshirt-size" value="XS" required/>
+              <label for="size-xs">XS</label>
+            </div>
+            <div>
+              <input id="size-s" type="radio" name="tshirt-size" value="S" required/>
+              <label for="size-s">S</label>
+            </div>
+            <div>
+              <input id="size-m" type="radio" name="tshirt-size" value="M" required/>
+              <label for="size-m">M</label>
+            </div>
+            <div>
+              <input id="size-l" type="radio" name="tshirt-size" value="L" required/>
+              <label for="size-l">L</label>
+            </div>
+            <div>
+              <input id="size-xl" type="radio" name="tshirt-size" value="XL" required/>
+              <label for="size-xl">XL</label>
+            </div>
+            <div>
+              <input id="size-xxl" type="radio" name="tshirt-size" value="XXL" required/>
+              <label for="size-xxl">XXL</label>
+            </div>
+          </fieldset>
+        </div>
+        <div>
+          <button type="submit">Confirm Order</button>
+        </div>
+
         <!-- write your html here-->
-        <!-- 
+        <!-- username
+         ----email
+         ----color - 3 options
+         ----Size - 7 xs,s,m,l,xl,xxl
+         ----order confirm
           try writing out the requirements first as comments
         this will also help you fill in your PR message later-->
       </form>
     </main>
     <footer>
+      <p>Thinzar Thet</p>
       <!-- change to your name-->
       <h2>By HOMEWORK SOLUTION</h2>
     </footer>
